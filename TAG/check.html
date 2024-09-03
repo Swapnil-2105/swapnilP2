@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tag Converter</title>
+    <style>
+        body {
+            font-family: "Libre Baskerville", system-ui;
+            font-weight: 700;
+            font-style: normal;
+            background-color:#7FA1C3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:#606676;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 20px;
+            border: 2px solid #4CAF50;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9fff9;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tag Converter</h1>
+        <label for="tagSelect">Select HTML Tag:</label>
+        <select id="tagSelect">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="p">p</option>
+            <option value="div">div</option>
+            <option value="span">span</option>
+            <option value="strong">strong</option>
+            <option value="em">em</option>
+            <option value="a">a</option>
+            <option value="ul">ul</option>
+            <option value="ol">ol</option>
+            <option value="li">li</option>
+            <option value="table">table</option>
+            <option value="tr">tr</option>
+            <option value="td">td</option>
+            <option value="th">th</option>
+            <option value="form">form</option>
+            <option value="input">input</option>
+            <option value="button">button</option>
+            <option value="label">label</option>
+            <option value="img">img</option>
+            <option value="iframe">iframe</option>
+            <option value="blockquote">blockquote</option>
+            <option value="code">code</option>
+            <option value="pre">pre</option>
+            <option value="hr">hr</option>
+            <option value="br">br</option>
+        </select>
+
+        <label for="inputText">Enter text:</label>
+        <input type="text" id="inputText" placeholder="Type your text here">
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tagSelect = document.getElementById('tagSelect');
+            const inputText = document.getElementById('inputText');
+            const output = document.getElementById('output');
+
+            function updateOutput() {
+                const selectedTag = tagSelect.value;
+                const text = inputText.value;
+                output.innerHTML = `<${selectedTag}>${text}</${selectedTag}>`;
+            }
+
+            tagSelect.addEventListener('change', updateOutput);
+            inputText.addEventListener('input', updateOutput);
+
+            // Initialize with the default values
+            updateOutput();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f9; /* Light background color */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 20px;
+    font-size: 2rem; /* Slightly larger font size */
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+    color: #555; /* Dark gray for labels */
+    font-size: 1rem; /* Standard font size */
+}
+
+select, input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border for inputs */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #fff; /* Match the container background color */
+    color: #333; /* Dark text color for inputs */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+#output, #explanation {
+    margin-top: 20px;
+    border: 1px solid #007bff; /* Blue border */
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fafafa; /* Light background for output and explanation */
+    font-size: 16px;
+    text-align: left;
+    white-space: pre-wrap;
+    color: #333; /* Dark text color for output */
+}
+
+#explanation {
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    select, input[type="text"] {
+        width: calc(100% - 20px);
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tag Converter</title>
+    <link rel="stylesheet" href="../demo/smestyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tag Converter</h1>
+        <label for="tagSelect">Select HTML Tag:</label>
+        <select id="tagSelect">
+            <option value="h1">H1</option>
+            <option value="h2">H2</option>
+            <option value="h3">H3</option>
+            <option value="h4">H4</option>
+            <option value="p">P</option>
+            <option value="strong">STRONG</option>
+            <option value="em">EM</option>
+            <option value="a">A</option>
+            <option value="ul">UL</option>
+            <option value="ol">OL</option>
+            <option value="li">LI</option>
+            <option value="table">TABLE</option>
+            <option value="tr">TR</option>
+            <option value="td">TD</option>
+            <option value="th">TH</option>
+            <option value="code">CODE</option>
+            <option value="pre">PRE</option>
+            <option value="hr">HR</option>
+            <option value="br">BR</option>
+        </select>
+
+        <label for="inputText">Enter text:</label>
+        <input type="text" id="inputText" placeholder="Type your text here">
+
+        <div id="output"></div>
+        <div id="explanation"></div>
+
+        <button onclick="updateOutput()">Update Output</button>
+        <button onclick="clearFields()">Clear</button>
+    </div>
+
+    <script src="../demo/smel.js"></script>
+</body>
+</html>
